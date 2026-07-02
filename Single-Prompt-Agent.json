@@ -1,0 +1,67 @@
+{
+  "agent_id": "",
+  "channel": "voice",
+  "last_modification_timestamp": 1782995258760,
+  "agent_name": "Single-Prompt Agent",
+  "response_engine": {
+    "type": "retell-llm",
+    "llm_id": "llm_17ba98c0c31542ffc487fe4b7ceb",
+    "version": 0
+  },
+  "webhook_url": " https://candy-cupcake-shaping.ngrok-free.dev/webhook",
+  "language": "en-US",
+  "data_storage_setting": "everything",
+  "opt_in_signed_url": false,
+  "version": 0,
+  "assigned_tags": [],
+  "is_published": false,
+  "post_call_analysis_model": "gpt-4.1",
+  "pii_config": {
+    "mode": "post_call",
+    "categories": []
+  },
+  "handbook_config": {
+    "default_personality": true,
+    "ai_disclosure": true
+  },
+  "post_call_analysis_data": [
+    {
+      "type": "string",
+      "name": "caller_name",
+      "description": "The caller’s name as stated"
+    },
+    {
+      "type": "number",
+      "name": "caller_age",
+      "description": "The caller’s age in years as an integer"
+    }
+  ],
+  "voice_id": "retell-Cimo",
+  "max_call_duration_ms": 3600000,
+  "interruption_sensitivity": 0.9,
+  "allow_user_dtmf": true,
+  "user_dtmf_options": {},
+  "retellLlmData": {
+    "llm_id": "llm_17ba98c0c31542ffc487fe4b7ceb",
+    "version": 0,
+    "model": "gpt-5.1",
+    "tool_call_strict_mode": true,
+    "general_prompt": "You are a friendly screening agent. Keep it brief and natural.\n1. Greet the caller in one sentence.\n2. Ask: \"What is your name?\" Wait for the answer.\n3. Ask: \"What is your age?\" If the answer is unclear or not a\nnumber, politely ask once more.\n4. Thank them and end the call. Do NOT announce pass or fail.",
+    "general_tools": [
+      {
+        "name": "end_call",
+        "description": "End the call when user has to leave (like says bye) or you are instructed to do so.",
+        "type": "end_call",
+        "speak_after_execution": true
+      }
+    ],
+    "start_speaker": "agent",
+    "knowledge_base_ids": [],
+    "kb_config": {
+      "top_k": 3,
+      "filter_score": 0.6
+    },
+    "last_modification_timestamp": 1782911340085,
+    "is_published": false
+  }
+}
