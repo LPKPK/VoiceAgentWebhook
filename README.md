@@ -1,8 +1,13 @@
 # Retell AI Webhook Test
 
+Here are the steps I have been through to learn and make my first voice agent work!
+
 ## Overview
 
-Here are the steps I have been through to learn and make my first voice agent work!
+The Retell AI agent extracts the caller's name and age during the conversation and includes these values in the webhook payload (in the call analysis, it extracted caller's name as text and caller's age as integer). 
+The FastAPI webhook receives the event, reads the extracted age from the JSON payload, and computes the result using the decide(age) function. 
+The decision logic is implemented on the server, this keeps the business logic separate from the conversational AI, allowing the webhook to make the final eligibility decision based on the extracted information.
+
 
 ## Prerequisites
 
